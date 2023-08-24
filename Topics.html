@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>G20 Security Nexus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400&display=swap" rel="stylesheet">
+
+<style>
+   @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: 'Livvic', sans-serif; /* Use the Google Fonts font */
+  text-align: center;
+      margin: 20px;
+      background-image: url("iyah!.png");
+      background-repeat: no-repeat;
+      background-size: cover; /* Add this line */
+}
+.neon-text {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7DF9FF;
+  text-shadow: 0 0 20px #7DF9FF, 0 0 40px #7DF9FF, 0 0 60px #7DF9FF;
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+@keyframes neonGlow {
+  from {
+    text-shadow: 0 0 20px #7DF9FF, 0 0 40px #7DF9FF, 0 0 60px #7DF9FF;
+  }
+  to {
+    text-shadow: 0 0 30px #7DF9FF, 0 0 50px #7DF9FF, 0 0 70px #7DF9FF;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+  animation: fadeIn 1s ease;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #29b6f6; /* Futuristic blue */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease;
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ff8f00; /* Vibrant orange */  background-color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #0000001a;
+}
+
+h5 {
+  color: #ff00f2; /* Electric pink */
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #0000001a;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  animation: fadeIn 1s ease;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  border: 2px solid #7DF9FF;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.card h2 {
+  font-size: 25px;
+  color: #7DF9FF;
+  text-shadow: 0 0 20px #7DF9FF, 0 0 40px #7DF9FF, 0 0 60px #7DF9FF;
+}
+.card h3 {
+  font-size: 24px;
+  color: #7DF9FF;
+  text-shadow: 0 0 10px #7DF9FF, 0 0 20px #7DF9FF, 0 0 30px #7DF9FF;
+}
+.card p {
+  font-size: 18px;
+  color: #7DF9FF;
+  text-shadow: 0 0 10px #7DF9FF, 0 0 20px #7DF9FF, 0 0 30px #7DF9FF;
+}
+.card a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  background-color: #7DF9FF;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.card a:hover {
+  background-color: #7DF9FF;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 150%;
+  color: #7DF9FF;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 150%;
+  color: #ff3572; /* Deep magenta */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+p {
+  color: #2ea1ff; /* Lively blue */
+  background-color: #333333;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #494949;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #4A5568;
+      cursor: pointer;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 25px;
+      color: #0072a7;
+      margin-bottom: 15px;
+    }
+    mark {
+      background-color: #494949; /* Dark gray */
+      color: #ff4d4d; /* Flashing red */
+;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-link {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #4af2c6; /* Teal hover color */
+}
+
+.navbar-link:last-child {
+  margin-right: 0;
+}
+
+h6{
+margin-top: 0;
+      font-size: 22px;
+      color: #a8ff6e; /* Neon green */
+      box-shadow: 2px 2px 4px #0000001a;
+      border-radius: 25px;
+      border-color: #cfcfcf;
+      border-width: 5px;
+      background-color: #1a1a1a;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateX(0);
+      transition: transform 0.5s ease;
+}
+
+    a {
+      color: #ff8f00; /* Orange color */
+      text-decoration: none; /* Remove underline */
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #c56d01; /* Darker orange color on hover */
+    }
+    .g20 h3{
+      background-color: #1a1a1a;
+      border-radius: 25px;
+    }
+ .sdg{
+  position: relative;
+  width: 100%;
+  border: 15px solid #9dff64;
+  border-radius: 80px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  transition: transform 0.3s ease;
+  transform: scale(0.9);
+  background-color: #1a1a1a;
+
+}
+.sdg:hover{
+transform: scale(1);
+}
+.sdg h2
+{font-size: 28px;
+  color: #ff3572;
+}
+.cs h6{
+  color:#fff56d
+}
+hr{
+  height: 8px;
+  background-color:#da7295;
+  border: whitesmoke;
+}
+.steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(225px, 1fr));
+      justify-items: center;
+      align-items: center;
+      gap: 18px;
+      margin-top: 20px;
+    }
+.steps{
+  width: 225px;
+      height: 255px;
+      border: 4px solid #fff56d;
+      padding: 5px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .steps:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: #fff;
+    }
+    .steps img {
+      width: 180px;
+      height: 130px;
+      margin-bottom: 10px;
+      border-radius: 15px;
+      border:2px solid #fff56d;
+      padding: 5px;
+    }
+    .steps h2 {
+  font-size: 18px;
+  color: #fff56d;
+  text-shadow: 0 0 10px #fff56d, 0 0 20px #fff56d, 0 0 30px #fff56d;}
+ 
+    
+/* Enhanced Footer Styles for a Captivating and Techy Look */
+.site-footer {
+  color: #ffffff; /* Text color */
+  padding: 40px 0;
+  font-family: 'Livvic', sans-serif; /* Use the Google Fonts font */
+  font-size: x-large;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Social Icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  font-size: 26px;
+  color: #ffffff;
+  margin-right: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ff8f00; /* Hover color */
+}
+.footer-content p {
+      display: flex;
+      align-items: left;
+      background-color: #535353;
+      border-radius: 10000000000000px;
+      text-decoration-color: #000000;
+}
+
+    .footer-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: #535353;
+      border-radius: 50px;
+      padding: 15px;
+    }
+
+    .footer-links li {
+      margin-right: 15px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <audio autoplay loop id="bgm"> <!-- Add an 'id' attribute to the audio element -->
+    <source src="bgm.mp3">
+  </audio>
+  <div class="navbar">
+    <div class="navbar-logo">
+      <img src="logo.png" alt="G20 Security Nexus Logo" style="max-width: 60px;">
+    </div>
+    <a href="intro.html" class="navbar-link">Home</a>
+    <a href="Topics.html" class="navbar-link">Topics</a>
+    <a href="work.html" class="navbar-link">Work</a>
+    <a href="trivia.html" class="navbar-link">Trivia</a>
+  </div>
+<br>
+<h1>G20</h1>
+<h4>The G20 (Group of Twenty) is an international forum for the governments and central bank governors from 19 countries and the European Union (EU).</h4>
+<h5>The countries participating in G20</h5> 
+  <div class="container">
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="arg.png">
+    <h2>Argentina</h2>  
+    </div>
+    <div class="card" style="width: 225px; height: 230px;">
+      <img class="card" src="aus.png">
+    <h2>Australia</h2>  
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="bra.png">
+      <h2>Brazil</h2>
+       </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="can.png">
+    <h2>Canada</h2>  
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="chi.png">
+      <h2>China</h2>
+      </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="eu.png">
+      <h2>European Union</h2>
+      </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="fra.png">
+     <h2>France</h2> 
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="ger.png">
+      <h2>Germany</h2>
+     </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="ind.png">
+      <h2>India</h2>   
+      </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="indo.png">
+      <h2>Indonesia</h2>   
+     </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="ita.png">
+      <h2>Italy</h2>     
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="jap.png">
+      <h2>Japan</h2>     
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="mex.png">
+      <h2>Mexico</h2>     
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="rus.png">
+      <h2>Russia</h2>   
+     </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="sau.png">
+      <h2>Saudi Arabia</h2>   
+      <h2></h2>   
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="sa.png">
+      <h2>South Africa</h2>   
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="sk.png">
+      <h2>South Korea</h2>   
+    </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="turk.png">
+      <h2>Turkey</h2>
+      </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="uk.png">
+      <h2>UK</h2>
+       </div>
+    <div class="card" style="width: 225px;height: 230px;">
+      <img class="card" src="us.png">
+      <h2>USA</h2>
+      </div>
+  </div>
+  <h4>Purpose and Goals</h4>
+  <div class="g20">
+  <h3>The primary objective of the G20 is to promote international financial stability and sustainable economic growth. Member countries engage in discussions and coordinate policies on various topics such as macroeconomic policy, trade, investment, development, climate change, and global governance.<br><br>
+    Annually, the G20 hosts a high-level ensemble of global leaders and financial experts. Together, they play a crucial tune of discussions spanning trade, investment, development, and climate change. This gathering orchestrates harmonious policies, nurturing worldwide economic stability and sustainable growth.
+  </h3>
+  </div>
+  <h4><a href="https://www.cfr.org/backgrounder/what-does-g20-do" target="_blank">For More Information, Click Here</a></h4>
+  <hr>
+  <h1>SDG-17</h1>
+<h6>Global Partnerships for Sustainable Development is the focus of SDG 17, one of the Sustainable Development Goals of the United Nations. To support the achievement of all SDGs, it aims to improve trade, boost technology transfer, and strengthen international cooperation. SDG 17 emphasises the value of cooperation between the public, private, and civil society sectors in addressing global challenges.
+<br>
+<br>
+  <pp>SDG 17 fosters global partnerships for sustainable development, encouraging collaboration among nations, businesses, and civil society to share knowledge, resources, and technology. It supports achieving all 16 other Sustainable Development Goals and tackling challenges like poverty, inequality, and climate change.</pp>
+</h6>
+<div class="sdg" style="display: flex; align-items: center; justify-content: center;">
+  <div style="margin-right: 20px;">
+    <img class="card" src="17.png" style="width: 225px; height: 230px; border-color: #9dff64;">
+  </div>
+  <div>
+    <h2>Countries forge alliances, allocate resources, share technological expertise, align policies, and exchange data to foster the progress of SDG 17. This involves enhancing global cooperation and coordination to ensure sustainable development, paving the way for a more inclusive and equitable world.</h2>
+  </div>
+</div>
+<h4><a href="https://www.bing.com/ck/a?!&&p=66bb4e865526ddeeJmltdHM9MTY5MjQwMzIwMCZpZ3VpZD0xNjYyNWFlMC1jZWFlLTYzMmUtMjc1YS00OTkyY2Y1YTYyOGQmaW5zaWQ9NTI3MA&ptn=3&hsh=3&fclid=16625ae0-ceae-632e-275a-4992cf5a628d&psq=sdg+17&u=a1aHR0cHM6Ly9zdXN0YWluYWJsZWRldmVsb3BtZW50LnVuLm9yZy9zZGcxNw&ntb=1" target="_blank">For More Information, Click Here</a></h4>
+<hr>
+<h1>Cyber Security</h1>
+<div class="cs">
+<h6>Cybersecurity refers to the practice of safeguarding computer systems, networks, and digital data from unauthorized access, attacks, damage, or theft. It involves implementing a combination of technical measures, protocols, and strategies to protect digital assets and ensure the confidentiality, integrity, and availability of information in the digital realm.</h6>
+<br>
+<br>
+<h6>At its essence, cybersecurity is a comprehensive practice aimed at safeguarding digital systems, networks, and data from a wide range of cyber threats, including unauthorized access, data breaches, malware attacks, and more. It involves implementing robust security measures, protocols, and technologies to ensure the confidentiality, integrity, and availability of information in today's interconnected and technology-driven world..</h6>
+<h4>Different Ways to Adopt Cyber Security</h4>
+<div class="steps-grid">
+  <div class="steps">
+    <img src="ps.png" alt="Step 1">
+    <h2>Use unique and complex passwords.</h2>
+  </div>
+  <div class="steps">
+    <img src="ts.png" alt="Step 2">
+    <h2>Enable multi-factor authentication (MFA).</h2>
+  </div>
+  <div class="steps">
+    <img src="ud.png" alt="Step 3">
+    <h2>Keep software and devices up to date.</h2>
+  </div>
+  <div class="steps">
+    <img src="wifi.png" alt="Step 4">
+    <h2>Use secure Wi-Fi and networks.</h2>
+  </div>
+  <div class="steps">
+    <img src="mail.png" alt="Step 5">
+    <h2>Be cautious of suspicious links and emails.</h2>
+  </div>
+  <div class="steps">
+    <img src="bu.png" alt="Step 6">
+    <h2>Regularly back up important data.</h2>
+</div>
+</div>
+<h4><a href="https://www.kaspersky.co.in/resource-center/definitions/what-is-cyber-security" target="_blank">For More Information, Click Here</a></h4>
+<hr>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <p>&copy; 2023 G20 Security Nexus. All rights reserved.</p>
+        <ul class="footer-links">
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="pp.html">Privacy Policy</a></li>
+        <li><a href="tos.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+  <script>
+   // Animation and interaction scripts
+const cards = document.querySelectorAll(".card");
+const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".modal-content");
+const modalClose = document.querySelector(".modal-close");
+
+// Your existing JavaScript code here
+// Get the audio element by its 'id'
+const bgm = document.getElementById('bgm');
+
+// Set the volume to a lower value (e.g., 0.5 for 50% volume)
+bgm.volume = 0.09; // Adjust the volume value as needed
+  </script>
+</html>

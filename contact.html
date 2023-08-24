@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Reset margin and padding for all elements */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Livvic', sans-serif;
+            background-image: url("iyah!.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #00ff99;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2px;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-logo img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .navbar-link {
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            padding: 0px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar-link:hover {
+            background-color: #333;
+            color: #4af2c6;
+        }
+
+        /* Main content styles */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 60px 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #00ff99;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            border-top: 5px solid #00ff99;
+            padding: 20px 30px 15px;
+            background-color: rgba(18, 18, 18, 0.8);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        /* Form styles */
+        form {
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            background-color: rgba(18, 18, 18, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            margin-top: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #00aaff;
+            margin-bottom: 10px;
+        }
+
+        mark {
+            background-color: rgba(18, 18, 18, 0.8);
+            color: #ff4d4d;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+            margin-bottom: 15px;
+            display: block;
+            padding: 10px;
+        }
+
+        input,
+        textarea {
+            width: 90%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 25px;
+            border: 1px solid #00ff99;
+            background-color: rgba(18, 18, 18, 0.8);
+            color: #00ff99;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+            margin-top: 5px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #00aaff;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            font-size: 1.2rem;
+            background-color: #00aaff;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00c6ff;
+        }
+
+        /* Footer styles */
+        .site-footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .footer-links li {
+            margin-right: 15px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="G20 Security Nexus Logo">
+        </div>
+        <div class="navbar-links">
+            <a href="intro.html" target="_self" class="navbar-link">Home</a>
+            <a href="Topics.html" class="navbar-link">Topics</a>
+            <a href="work.html" class="navbar-link">Work</a>
+            <a href="trivia.html" class="navbar-link">Trivia</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <h2>Connect with the Cyber Nexus</h2>
+        <form id="contact-form" action="https://formspree.io/f/maygoqdy" method="POST">
+            <label for="name"><mark>Name:</mark></label>
+            <input type="text" id="name" name="name" required>
+            <label for="email"><mark>Email:</mark></label>
+            <input type="email" id="email" name="email" required>
+            <label for="message"><mark>Message:</mark></label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 G20 Security Nexus. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="pp.html">Privacy Policy</a></li> <!-- Link to Privacy Policy -->
+                    <li><a href="tos.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Contact Form Submission
+        const contactForm = document.getElementById("contact-form");
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Disable the submit button temporarily
+            const submitButton = document.querySelector('input[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.value = "Submitting...";
+
+            // Submit the form to Formspree
+            const formData = new FormData(contactForm);
+            fetch(contactForm.action, {
+                method: "POST",
+                headers: {
+                    Accept: "application/json"
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle success or error based on the response
+                if (data.success) {
+                    console.log("Form submitted successfully!");
+                    // Reset form fields
+                    contactForm.reset();
+                } else {
+                    console.error("Form submission failed:", data.error);
+                }
+            })
+            .catch(error => {
+                console.error("Form submission error:", error);
+            })
+            .finally(() => {
+                // Re-enable the submit button
+                submitButton.disabled = false;
+                submitButton.value = "Connect";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>G20 Security Nexus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: 'Livvic', sans-serif;
+      text-align: center;
+      margin: 0;
+      background-image: url("iyah!.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .title-container {
+      margin-top: 150px;
+    }
+
+    .title {
+      font-size: 60px;
+      font-weight: bold;
+      color: #00d9ff;
+      text-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
+      background-color: #212121;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .title:hover {
+      background-color: #00d9ff;
+      color: #000;
+    }
+
+    h4 {
+      font-size: 25px;
+      font-weight: bold;
+      color: #a0ff94;
+      text-shadow: #61ff4d;
+      background-color: #212121;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 255, 150, 0.2);
+      margin-top: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    h4:hover {
+      background-color: #a0ff94;
+      color: #000;
+    }
+
+    /* Add this CSS to your external styles.css file */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000000;
+}
+
+.navbar-logo {
+  margin-right: 20px;
+}
+
+.navbar-link {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #4af2c6; /* Teal hover color */
+}
+
+.navbar-link:last-child {
+  margin-right: 0;
+}
+
+    .card {
+      position: relative;
+      width: 200px; /* Adjust the card width */
+      height: 280px; /* Adjust the card height */
+      border: 2px solid #7DF9FF;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+      transform: scale(1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      color: #7DF9FF;
+      text-shadow: 0 0 20px #7DF9FF, 0 0 40px #7DF9FF, 0 0 60px #7DF9FF;
+      margin-top: 10px;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+    .site-footer {
+  color: #ffffff;
+  padding: 10px;
+  align-items: center;
+  text-align: center; /* Add this line to center-align the content */
+  font-family: 'Livvic', sans-serif;
+  font-size: x-large;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Change to a column layout for center alignment */
+  align-items: center; /* Center-align the items horizontally */
+  justify-content: center; /* Center-align the items vertically */
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center-align the links horizontally */
+}
+
+.footer-links li {
+  margin-right: 15px;
+}
+.footer-content p {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 14px;
+  padding: 25px;
+}
+.footer-links a {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #b3b3b3;
+}
+
+    .summary-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 200px;
+    }
+
+    .summary-title {
+      font-size: 28px;
+      color: #b0ff96;
+    }
+
+    .summary-text {
+      font-size: 18px;
+      color: #fff;
+      line-height: 1.6;
+    }
+ </style>
+</head>
+<body>
+  <audio autoplay loop id="bgm">
+    <source src="bgm.mp3">
+  </audio>
+  <div class="navbar">
+    <div class="navbar-logo">
+      <img src="logo.png" alt="G20 Security Nexus Logo" style="max-width: 60px;">
+    </div>
+    <a href="intro.html" target="_self" class="navbar-link">Home</a>
+    <a href="Topics.html" class="navbar-link">Topics</a>
+    <a href="work.html" class="navbar-link">Work</a>
+    <a href="trivia.html" class="navbar-link">Trivia</a>
+  </div>
+  <div class="title-container">
+    <h1 class="title">G20 Security Nexus</h1>
+    <h4>Presented by: Vishesh and Maulik</h4>
+  </div>
+  <div class="row">
+    <div class="card">
+      <img src="bg.png" alt="G20">
+      <h2>G20</h2>
+    </div>
+    <div class="card">
+      <img src="17.png" alt="SDG-17">
+      <h2>SDG-17</h2>
+    </div>
+    <div class="card">
+      <img src="cs.png" alt="Cyber Security">
+      <h2>Cyber Security</h2>
+    </div>
+  </div>
+  <div class="summary-container">
+    <h2 class="summary-title">Explore the Nexus of Security and Collaboration</h2>
+    <p class="summary-text">Dive into the G20 forum, unravel the significance of Sustainable Development Goal 17, and delve into the realm of Cyber Security. Embark on a journey driven by technology and international cooperation. Join us to decode the interconnected world of security and knowledge.</p>
+  </div>
+  <hr>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2023 G20 Security Nexus. All rights reserved.</p>
+          <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="pp.html">Privacy Policy</a></li>
+          <li><a href="tos.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.09;
+</script>
+</html>
